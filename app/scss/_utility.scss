@@ -1,0 +1,84 @@
+// FLEXBOX
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+// DISPLAY
+
+.none {
+  display: none !important;
+}
+
+// TYPOGRAPHY
+
+.align-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.spacing-small {
+  letter-spacing: -0.5px;
+}
+
+.coolGray {
+  color: $coolGray;
+}
+
+.lightMarineBlue {
+  color: $lightMarineBlue;
+}
+
+.purplishBlue {
+  color: $purplishBlue;
+}
+
+.size-medium {
+  font-size: 1.7rem;
+}
+
+.bold {
+  font-weight: $bold;
+}
+
+.medium {
+  font-weight: $medium;
+}
+
+// SPACING
+
+.mt-small {
+  margin-top: 3.5rem;
+}
+
+.mt-medium {
+  margin-top: 5rem;
+}
+
+.pd-top-small {
+  padding-top: 1.5rem;
+}

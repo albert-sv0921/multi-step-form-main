@@ -1,0 +1,476 @@
+.container {
+  margin: 10vh auto;
+  max-width: 114rem;
+  max-height: 70rem;
+
+  padding: 8rem 15rem;
+  background-color: $magnolia;
+  border-radius: 5px;
+  box-shadow: 0 3rem 10rem rgba(0, 0, 0, 0.15);
+}
+
+.form {
+  &__container {
+    max-width: 100rem;
+    // min-height: 50rem;
+
+    display: flex;
+
+    padding: 2rem;
+    background-color: $white;
+    border-radius: 15px;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+
+    .sidebar {
+      position: relative;
+
+      svg {
+        position: relative;
+        max-width: 85%;
+        height: auto;
+      }
+    }
+
+    .main {
+      background-color: $white;
+      flex-grow: 1;
+      padding: 2rem 3rem 1rem 3rem;
+      text-align: start;
+
+      display: flex;
+      // flex-direction: column;
+
+      .header {
+        margin-bottom: 3.5rem;
+        h2 {
+          color: $marineBlue;
+          font-size: 3rem;
+          font-weight: $bold;
+        }
+        p {
+          color: $coolGray;
+          font-size: 1.5rem;
+          font-weight: $regular;
+        }
+      }
+    }
+  }
+}
+
+.form {
+  display: flex;
+  max-width: 42rem;
+  flex-grow: 1;
+
+  .page {
+    flex-grow: 1;
+    // justify-content: center;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    label {
+      color: $marineBlue;
+      margin-bottom: 0.5rem;
+      letter-spacing: -1px;
+      font-size: 1.5rem;
+    }
+
+    input {
+      border: 1px solid $lightGray;
+      border-radius: 5px;
+      padding: 0.7rem 1.7rem;
+      color: $marineBlue;
+      font-weight: $bold;
+
+      &:invalid {
+        background-color: ivory;
+        border: none;
+        outline: 1px solid red;
+        border-radius: 5px;
+      }
+
+      &::placeholder {
+        font-weight: $regular;
+        color: $coolGray;
+      }
+
+      &:focus {
+        outline: 1px solid $violet;
+      }
+    }
+  }
+}
+
+// ------ BUTTONS ------ START
+
+.btn {
+  align-self: end;
+  &__container {
+    display: flex;
+    flex-grow: 1;
+  }
+  // margin-top: 3.2rem;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  background-color: $marineBlue;
+  color: $magnolia;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $lightMarineBlue;
+
+    &.btn.bright {
+      background-color: $pastelBlue;
+    }
+  }
+}
+
+.btn-prev {
+  border: none;
+  background-color: transparent;
+  color: $coolGray;
+  padding: 1rem 2rem;
+  align-self: end;
+
+  &:hover {
+    color: $lightMarineBlue;
+    cursor: pointer;
+    font-weight: $bold;
+  }
+}
+
+// ------ BUTTONS ------ END
+
+.count {
+  &__container {
+    position: absolute;
+    top: 7%;
+    left: 10%;
+  }
+
+  &__row {
+    display: flex;
+    margin-bottom: 2.2rem;
+    color: $white;
+
+    .step {
+      font-weight: $bold;
+      height: 3rem;
+      width: 3rem;
+      margin-right: 1rem;
+      font-size: 1.4rem;
+      color: $magnolia;
+
+      border: 1px solid $white;
+      border-radius: 50%;
+
+      span {
+        margin-top: 1px;
+        margin-left: -1px;
+      }
+    }
+
+    .step.active {
+      border: transparent;
+      background-color: $pastelBlue;
+      color: $marineBlue;
+    }
+
+    .step-info {
+      font-size: 1.2rem;
+
+      p:first-child {
+        color: $coolGray;
+        letter-spacing: -0.5px;
+      }
+
+      p:last-child {
+        color: $magnolia;
+        letter-spacing: 0.9px;
+        font-size: 1.3rem;
+        font-weight: $bold;
+      }
+    }
+  }
+}
+
+// ------ PAGE 2 ------ START
+
+.radio {
+  &__container {
+    display: flex;
+    text-align: start;
+
+    .label {
+      &__card {
+        padding: 2rem 1.5rem;
+        border: 1px solid $lightGray;
+        border-radius: 8px;
+        margin-bottom: 3rem;
+
+        &:hover {
+          border: 1px solid $violetblue;
+        }
+
+        svg {
+          margin-bottom: 3rem;
+        }
+
+        &:not(:last-child) {
+          margin-right: 3rem;
+        }
+
+        display: block;
+        max-width: 12rem;
+        max-height: 17rem;
+        flex-grow: 1;
+
+        &:has(> input:checked) {
+          background-color: $magnolia;
+          border: 1px solid $violetblue;
+        }
+
+        input {
+          display: none;
+          // position: absolute;
+          // opacity: 0;
+          // width: 0;
+          // height: 0;
+        }
+      }
+
+      &__info {
+        h3 {
+          color: $marineBlue;
+
+          font-size: 1.5rem;
+          font-weight: $bold;
+        }
+        p {
+          color: $coolGray;
+          font-size: 1.2rem;
+          font-weight: $regular;
+        }
+
+        span {
+          font-size: 1.2rem;
+          color: $lightMarineBlue;
+        }
+      }
+    }
+  }
+}
+
+.switch {
+  &__container {
+    background-color: $magnolia;
+    border-radius: 8px;
+  }
+
+  display: flex;
+  justify-content: center;
+  position: relative;
+  // padding: 1rem;
+
+  &__label {
+    // flex-grow: 1;
+    // flex-basis: 40%;
+
+    position: relative;
+    z-index: 20;
+    padding: 1rem 4rem;
+    color: $coolGray;
+    font-size: 1.4rem;
+    font-weight: $medium;
+    letter-spacing: -0.6px;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .switch__label {
+      color: $marineBlue;
+      font-weight: $bold;
+    }
+
+    &--1:checked ~ .switch__selection::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-110%, -50%);
+      height: 1.3rem;
+      width: 1.3rem;
+      background-color: $white;
+      border-radius: 50%;
+      z-index: 100;
+    }
+
+    &--2:checked ~ .switch__selection::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(10%, -50%);
+      height: 1.3rem;
+      width: 1.3rem;
+      background-color: $white;
+      border-radius: 50%;
+      z-index: 100;
+    }
+  }
+
+  &__selection {
+    position: absolute;
+    z-index: 10;
+
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 3.8rem;
+    height: 1.8rem;
+    border-radius: 3rem;
+    background-color: $marineBlue;
+  }
+}
+
+// ------ PAGE 2 ------ END
+
+// ------ PAGE 3 ------ START
+
+.page--3 {
+  .addons__container {
+    display: flex;
+    flex-direction: column;
+
+    .addon {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem;
+      border: 1px solid $lightGray;
+      border-radius: 8px;
+
+      input {
+        width: 1.7rem;
+        height: 1.7rem;
+      }
+
+      &:has(> input:checked) {
+        background-color: $magnolia;
+        border: 1px solid $violetblue;
+      }
+
+      &:hover {
+        border: 1px solid $violetblue;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 1.6rem;
+      }
+
+      .info {
+        flex-grow: 1;
+        padding: 0 2.5rem;
+        h3 {
+          color: $lightMarineBlue;
+
+          font-size: 1.6rem;
+          font-weight: $bold;
+        }
+        p {
+          color: $coolGray;
+          font-size: 1.4rem;
+          font-weight: $regular;
+        }
+      }
+
+      span {
+        font-size: 1.4rem;
+        color: $purplishBlue;
+      }
+    }
+  }
+}
+
+// ------ PAGE 3 ------ END
+
+// ------ PAGE 4 ------ START
+
+.page--4 {
+  .summary__container {
+    .summary {
+      padding: 1.6rem 2.5rem 1.6rem 2.5rem;
+      border-radius: 8px;
+      background-color: $magnolia;
+
+      &__row--1 {
+        border-bottom: 1px solid $lightGray;
+        padding-bottom: 1.5rem;
+
+        &:first-child {
+          span {
+            color: $marineBlue;
+
+            font-size: 1.5rem;
+            font-weight: $bold;
+          }
+          a:link,
+          a:visited {
+            text-decoration: none;
+            color: $coolGray;
+            font-size: 1.3rem;
+            font-weight: $regular;
+          }
+
+          a:hover,
+          a:active {
+            color: $purplishBlue;
+          }
+        }
+      }
+
+      &__row--2 {
+        font-size: 1.4rem;
+      }
+    }
+
+    .total {
+      font-size: 1.4rem;
+      padding: 1.6rem 2.5rem 1.6rem 2.5rem;
+    }
+  }
+}
+
+// ------ PAGE 4 ------ END
+
+// ------ PAGE 5 ------ START
+
+.page--5 {
+  max-width: 45rem;
+  flex-grow: 1;
+
+  .svg {
+    margin-bottom: 1.8rem;
+  }
+
+  .p1 {
+    font-size: 3.2rem;
+    font-weight: $bold;
+    color: $marineBlue;
+    margin-bottom: 1rem;
+  }
+
+  .p2 {
+    font-size: 1.5rem;
+    color: $coolGray;
+  }
+}
